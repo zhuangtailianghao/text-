@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>购物车</title>
+        <script src="gouwuche.js"></script>
+        <script src="jquery_mini.js"></script>
+       
+        		<style type="text/css">
+			*{margin: 0;padding: 0;}
+			input{width: 20px;height: 20px;}
+			button{width: 25px;height: 30px;}
+			table{
+				width: 1500px;
+				height: 700px;
+				margin:100px auto;
+				text-align: center;
+				position: relative;
+				font-size: 25px;
+				/* background-image: url(1.jpg); */
+			}
+			span{position: absolute;}
+            #dianji{width: 150px;height: 50px;}
+		</style>
+	</head>
+	<body>
+		<table border="1" cellspacing="0" cellpadding="0">
+			<tr>
+				<th ><input type="checkbox" name="" value=""  id="all"/>全选/反选</th>
+				<th>商品</th>
+				<th>单价</th>
+				<th>数量</th>
+				<th>小计</th>
+				<th>操作</th>
+			</tr>
+            <tbody>
+
+            </tbody>
+			<!-- <tr class="hang">
+				<td><input type="checkbox" name="" id="" value="" class="one" /></td>
+				<td>短袖</td>
+				<td class="dan">50</td>
+				<td><button type="button" class="jian">-</button>
+				<input type="text" name="" id="" value="1" class="shuliang"/>
+				<button type="button" class="jia">+</button></td>
+				<td class="xiaoji">50</td>
+				<td><button type="button"style="width: 80px; height: 50px;font-size: 20px;" class="delete">删除</button></td>
+			</tr>
+			<tr class="hang">
+				<td><input type="checkbox" name="" id="" value="" class="one" /></td>
+				<td>裤子</td>
+				<td class="dan">70</td>
+				<td><button type="button" class="jian">-</button>
+				<input type="text" name="" id="" value="1" class="shuliang"/>
+				<button type="button" class="jia">+</button></td>
+				<td class="xiaoji">70</td>
+				<td><button type="button"style="width: 80px; height: 50px;font-size: 20px;" class="delete">删除</button></td>
+			</tr>
+			<tr class="hang">
+				<td><input type="checkbox" name="" id="" value="" class="one" /></td>
+				<td>鞋子</td>
+				<td class="dan">150</td>
+				<td><button type="button" class="jian">-</button>
+				<input type="text" name="" id="" value="1" class="shuliang"/>
+				<button type="button" class="jia">+</button></td>
+				<td class="xiaoji">150</td>
+				<td><button type="button"style="width: 80px; height: 50px;font-size: 20px;" class="delete">删除</button></td>
+			</tr>
+			<tr class="hang">
+				<td><input type="checkbox" name="" id="" value="" class="one" /></td>
+				<td>手表</td>
+				<td class="dan">850</td>
+				<td><button type="button" class="jian">-</button>
+				<input type="text" name="" id="" value="1"class="shuliang" />
+				<button type="button" class="jia">+</button></td>
+				<td class="xiaoji">850</td>
+				<td><button type="button"style="width: 80px; height: 50px;font-size: 20px;" class="delete">删除</button></td>
+			</tr> -->
+			<tr>
+				<td colspan="6">
+					<div>
+						合计：￥&nbsp;&nbsp;<span id="priceTotal">0</span>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;已选商品<span id="selectedTotal">&nbsp;&nbsp;0</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;件 					
+					<button>点击获取更多</button>
+                </div>
+				</td>	
+			</tr>
+		</table>
+
+        
+	</body>
+</html>

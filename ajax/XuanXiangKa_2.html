@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>选项卡</title>
+	<script src="./jquery_mini(1).js"></script>
+    <style>
+        ul,li{
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			ul{
+				overflow: hidden;
+			}
+			li{
+				width: 100px;
+				height: 40px;
+				line-height: 40px;
+				border: 1px solid #000000;
+				background-color: aquamarine;
+				font-size: 20px;
+				text-align: center;
+                margin-left: 25px;
+				float: left;
+			}
+			div{
+				width: 405px;
+				height: 405px;
+				border: 1px solid #FAEBD7;
+			}
+			img{
+				width: 405px;
+				height: 405px;
+				display: none;
+			}
+    </style>
+</head>
+<body>
+    <ul>
+        <li>111</li>
+        <li>222</li>
+        <li>333</li>
+    <div>
+        <img src="" alt="" style="display: none">
+        <img src="" alt="">
+        <img src="" alt="">
+        </ul>
+    </div>
+    <script>
+        let li = document.getElementsByTagName('li');
+			let img = document.getElementsByTagName('img');
+			for(let i=0;i<li.length;i++){
+				li[i].index = i;
+				li[i].onmouseover = function(){
+					li[this.index].style.backgroundColor = 'orange';	
+				for(let j=0;j<img.length;j++){
+					img[j].style.display = 'none';
+				}
+				img[this.index].style.display = 'block';
+				}
+				li[i].onmouseout = function(){
+					li[this.index].style.backgroundColor = 'aquamarine';
+				}
+			}
+
+			$(function(){
+    let obj;
+    $.ajax({
+        // 获取路径
+        url:"XuanXiangKa_2.json",
+        // get类型
+        type:"GET",
+        dataType: "json",
+        // 是否异步
+        async: false,
+        success: function (d) {
+            obj = d;
+     }
+    })
+
+    for(let i=0;i<obj.src.length;i++){
+        $("div img").eq(i).attr("src",obj.src[i]);     
+    } 
+})
+    </script>
+</body>
+</html>
